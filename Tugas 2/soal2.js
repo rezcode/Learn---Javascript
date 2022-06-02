@@ -17,14 +17,16 @@ const data = [
   "Penelope",
 ];
 
+const newArr = data.map((e) => {
+  return e.toLowerCase();
+});
+
 const find = (key, jumlah) => {
-  const output = data
-    .filter((x) => x.includes(key))
-    .map((element) => {
-      return element.toLowerCase();
-    });
+  const output = newArr.filter((x) => x.includes(key));
   if (jumlah <= output.length) {
     return output.slice(0, jumlah);
+  } else if (output.length == 0) {
+    return `tidak ditemukan`;
   } else {
     return `hanya ada ${output.length} = ${output.slice(0, jumlah)}`;
   }
@@ -34,4 +36,4 @@ const search = (key, jumlah, find) => {
   return find(key, jumlah);
 };
 
-console.log(search("Al", 2, find));
+console.log(search("an", 3, find));
