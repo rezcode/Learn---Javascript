@@ -1,4 +1,4 @@
-// .bind()
+// 1 .bind()
 const person = {
   firstName: "Rezha",
   lastName: "Riansyah",
@@ -16,27 +16,57 @@ fullName = person.fullName.bind(person2);
 
 // console.log(fullName());
 
-// .endswith()
-let nama = "Rezha Riansyah";
-let check1 = nama.endsWith("syah");
-let check2 = nama.endsWith("rian");
+// 2 .endswith()
+const nama = "Rezha Riansyah";
+const check1 = nama.endsWith("syah");
+const check2 = nama.endsWith("rian");
 
 // console.log(check1, check2);
 
-// .repeat()
-let txt = "Rezha Riansyah \n";
-let result = txt.repeat(4);
+// 3 .repeat()
+const txt = "Rezha Riansyah \n";
+const result = txt.repeat(4);
 
 // console.log(result);
 
-// .shift()
-let buah = ["Banana", "Orange", "Apple", "Mango"];
+// 4 .shift()
+const buah = ["Banana", "Orange", "Apple", "Mango"];
 buah.shift(); //return array setelah di remove
 
 // console.log(buah);
 
-// .replace()
-let txt1 = "Rezha Riansyah";
-let hasil = txt1.replace("Rezha", "String Baru");
+// 5 .replace()
+const txt1 = "Rezha Riansyah";
+const hasil = txt1.replace("Rezha", "newString");
 
 // console.log(hasil);
+
+// 6 .includes()
+const kalimat = "hello world";
+const result1 = kalimat.includes("world");
+
+// console.log(result1);
+
+// 7 .trim()
+const text = "     Hello World!     ";
+const result3 = text.trim();
+
+// console.log(result3);
+
+// 8 .lastIndexOf()
+const fruits = ["Orange", "Apple", "Mango", "Apple", "Banana", "Apple"];
+let index = fruits.lastIndexOf("Apple");
+
+// console.log(index);
+
+// 9 .indexOf()
+const orang = ["rezha", "rian", "joni", "toni"];
+let index1 = orang.indexOf("joni");
+
+// console.log(index1);
+
+// 10 .slice()
+const fruits2 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const output = fruits2.slice(1, 3);
+
+// console.log(output);
