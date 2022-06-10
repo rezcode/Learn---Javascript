@@ -22,5 +22,7 @@ const newData = {
 
 const { street, city } = data.address;
 
+console.log(`========soal 4.a========`);
 console.log(newData);
+console.log(`========soal 4.b========`);
 console.log(`${street} dan ${city}`);
