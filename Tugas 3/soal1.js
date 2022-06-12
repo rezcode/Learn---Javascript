@@ -8,18 +8,18 @@ const cekHarikerja = (day) => {
       try {
         if (cek) {
           resolve(cek);
-        } else throw err;
+        } else throw `data tidak ditemukan`;
       } catch (err) {
-        reject(new Error(`data not found`));
+        reject(err);
       }
     }, 3000);
   });
 };
 
-cekHarikerja("b")
+cekHarikerja("senin")
   .then((res) => {
     console.log(`iya hari ${res} adalah hari kerja`);
   })
   .catch((err) => {
-    console.log(err.message);
+    console.log(err);
   });
