@@ -5,17 +5,21 @@ const cekHarikerja = (day) => {
       let cek = dataDay.find((item) => {
         return item === day;
       });
-      if (cek) {
-        resolve(cek);
-      } else reject(new Error("Hari ini bukan hari kerja "));
+      try {
+        if (cek) {
+          resolve(cek);
+        } else throw err;
+      } catch (err) {
+        reject(new Error(`data not found`));
+      }
     }, 3000);
   });
 };
 
-const thenCatch = cekHarikerja("senin");
-
-thenCatch
+cekHarikerja("b")
   .then((res) => {
     console.log(`iya hari ${res} adalah hari kerja`);
   })
-  .catch((err) => console.log(err));
+  .catch((err) => {
+    console.log(err.message);
+  });
