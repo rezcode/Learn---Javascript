@@ -11,6 +11,7 @@ const cekHarikerja = (day) => {
     }, 3000);
   });
 };
+
 const thenCatch = cekHarikerja("senin");
 
 thenCatch
