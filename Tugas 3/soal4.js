@@ -5,7 +5,7 @@ const getData = () => {
   return new Promise(async (resolve, reject) => {
     try {
       const request = await axios.get(url);
-      // console.log(request.data);
+      // console.log(request);
       if (request?.data?.length) {
         resolve(request.data);
       }
