@@ -27,11 +27,12 @@ const getData = () => {
   getMonth((err, month) => {
     try {
       if (err === null) {
+        //validasi untuk mengeluarkan value month
         month.map((res) => {
           console.log(res);
         });
       } else {
-        throw err;
+        throw err; //lempar error dari callback
       }
     } catch (err) {
       console.log(err.message);
