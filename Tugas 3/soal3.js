@@ -65,8 +65,8 @@ const filterCity = (city) => {
         if (city === filtered[0].address.city) {
           resolve(filtered);
         }
-      } catch (error) {
-        reject(error);
+      } catch (err) {
+        reject(err);
       }
     }, 3000);
   });
@@ -86,8 +86,10 @@ checkSpeed(40)
     console.log(err);
   });
 
-filterCity("Makassar")
+filterCity("Mkassar")
   .then((res) => {
     console.log(res);
   })
-  .catch((err) => console.log(`data not found`));
+  .catch((err) => {
+    console.log(`${err.message} or data not found`);
+  });
