@@ -34,6 +34,8 @@ if (
   typeof ipa !== "number"
 ) {
   console.log("must be number");
+} else if (mtk < 0 || bahasaIndonesia < 0 || bahasaInggris < 0 || ipa < 0) {
+  console.log("must be a positive number");
 } else {
   console.log(output());
 }
