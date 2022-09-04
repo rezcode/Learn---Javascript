@@ -72,7 +72,7 @@ const filterCity = (city) => {
   });
 };
 
-checkSpeed(40)
+checkSpeed(100)
   .then((res) => {
     if (res >= 100) {
       console.log(`Uncontrolable speed, please slow down!`);
@@ -86,7 +86,7 @@ checkSpeed(40)
     console.log(err);
   });
 
-filterCity("Mkassar")
+filterCity("Jakarta")
   .then((res) => {
     console.log(res);
   })

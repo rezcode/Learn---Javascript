@@ -16,7 +16,7 @@ const cekHarikerja = (day) => {
   });
 };
 
-cekHarikerja("senin")
+cekHarikerja("minggu")
   .then((res) => {
     console.log(`iya hari ${res} adalah hari kerja`);
   })

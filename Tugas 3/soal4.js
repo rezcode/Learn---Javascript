@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const getData = () => {
-  const url = `https://jsonplaceholder.typicode.com/usersss`;
+  const url = `https://jsonplaceholder.typicode.com/users`;
   return new Promise(async (resolve, reject) => {
     try {
       const request = await axios.get(url);
@@ -21,9 +21,11 @@ getData()
     console.log(names.join(","));
   })
   .catch((err) => {
-    console.log(err.message);
-    // const { status, statusText } = err.response;
-    // if (status === 404) {
-    //   console.log(`error code ${status},data ${statusText}`);
-    // }
+    // console.log(err.message);
+    const { status, statusText } = err.response;
+    if (status === 404) {
+      console.log(`error code ${status},data ${statusText}`);
+    } else {
+      console.log(err.message);
+    }
   });
