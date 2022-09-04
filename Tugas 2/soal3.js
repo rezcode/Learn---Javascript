@@ -2,7 +2,9 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
   let hasil = dataArray
     .filter((e) => e >= nilaiAwal && e <= nilaiAkhir)
     .sort((a, b) => a - b);
-  if (nilaiAwal >= nilaiAkhir) {
+  if (nilaiAkhir < 0 || nilaiAkhir < 0) {
+    console.log(`nilai harus berupa number dan tidak boleh negatif`);
+  } else if (nilaiAwal >= nilaiAkhir) {
     console.log(`nilai akhir harus lebih besar dari nilai awal`);
   } else if (dataArray.length <= 5) {
     console.log(`jumlah angka dalam dataArray harus lebih dari 5`);
@@ -15,4 +17,5 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
 
 seleksiNilai(5, 17, [2, 25, 4, 14, 17, 30, 8]);
 seleksiNilai(5, 17, [2, 25, 4]);
+seleksiNilai(17, 5, [2, 25, 4, 1, 30, 18]);
 seleksiNilai(5, 17, [2, 25, 4, 1, 30, 18]);

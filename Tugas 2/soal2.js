@@ -33,7 +33,13 @@ const find = (key, jumlah) => {
 };
 
 const search = (key, jumlah, find) => {
-  return find(key, jumlah);
+  if (jumlah < 0 || typeof jumlah !== "number") {
+    return "value must be a positive number";
+  } else {
+    return find(key, jumlah);
+  }
 };
 
-console.log(search("an", 3, find));
+console.log(search("an", 5, find));
+console.log(search("bo", 2, find));
+console.log(search("an", 6, find));
